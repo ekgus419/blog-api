@@ -31,11 +31,11 @@ Spring Boot
   * 타입 안전한 쿼리 작성을 위한 프레임워크
 
 ## 유즈케이스 다이어그램
-* ![usecase](https://github.com/user-attachments/assets/d46e8e54-db2a-4130-802a-dfe359bee48f)
+![usecase](https://github.com/user-attachments/assets/d46e8e54-db2a-4130-802a-dfe359bee48f)
 
 ## 팩토리 메소드
-빌더 패턴도 고려했으나, 객체의 복잡한 생성 과정이 아닌 특정 객체의 생성과 초기화 일관성을 유지하는데 더 적합하다고 판단하여 
-팩토리 패턴을 선택하였습니다.
+빌더 패턴도 고려했으나, 객체의 복잡한 생성 과정이 아닌 특정 객체의 생성과 초기화 일관성을 유지하는데 
+더 적합하다고 판단하여 팩토리 패턴을 선택하였습니다.
 
 ```java
 @Entity
@@ -79,5 +79,6 @@ public ResponseEntity<? super PostBoardResponseDto> postBoard(PostBoardRequestDt
 }
 ```
 
-위와 같이 객체를 생성할 때 직접 생성자를 호출하지 않고, 팩토리 메소드를 사용하여 객체를 생성하여
-성 로직을 일관되게 관리하고, 객체 생성의 복잡성을 줄이려 하였습니다.
+위와 같이 객체를 생성할 때 직접 생성자를 호출하지 않고, 
+팩토리 메소드를 사용하여 객체를 생성하여 생성 로직을 일관되게 관리하고, 
+객체 생성의 복잡성을 줄이려 하였습니다.
